@@ -1,0 +1,30 @@
+Packages to install on a fresh linux system:
+emacs (not required, still need to set it up config wise. best to just use vim for now)
+git (if not installed. do this before vim.)
+vim (with config files)
+htop
+Atom (web)
+    minimap
+    atom-material-ui
+    atom-material-syntax-dark
+    file-icons
+Google Chrome (web)
+Spotify (self ppa)
+i3 (with config files)
+<numix ppa>
+numix-gtk-theme
+numix-icon-theme-circle
+</numix ppa>
+
+Note:
+If install is a server:
+preinstalls:
+    (ALWAYS) OpenSSH Server (this will allow you to SSH into the server)
+    (if file server) Samba File Server
+
+*END*
+NOTE FOR REPLACING/UPGRADING SYSTEMS:
+Always back up config files for all of the above programs (when applicable)
+ESPECIALLY: i3, emacs, vim
+Also, update the package list on Atom if applicable. 
+Not doing this will likely bite you in the ass later.
