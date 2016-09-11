@@ -1,5 +1,5 @@
 " VIM config file
-" U 8/30/16
+" U 9/11/2016
 
 " Added Packages
 " git (required dependency)
@@ -50,3 +50,9 @@ endfu
 " Sets a call for the word processor mode
 com! WP call WordProcessorMode()
 
+" Folds all functions in a large text file
+func! FoldAllFunctions()
+    set foldmethod=syntax
+endfu
+" Sets a call for the function
+com! F call FoldAllFunctions()

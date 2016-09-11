@@ -16,6 +16,10 @@ numix-gtk-theme
 numix-icon-theme-circle
 </numix ppa>
 
+OPTIONALS:
+    fish (terminal)
+    fortune (not the install name, but the suggestion should make it obvious)
+
 Note:
 If install is a server:
 preinstalls:
