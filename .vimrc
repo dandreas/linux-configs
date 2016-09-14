@@ -56,3 +56,10 @@ func! FoldAllFunctions()
 endfu
 " Sets a call for the function
 com! F call FoldAllFunctions()
+
+" Inserts the date
+func! InsertDate()
+    r!date "+\%Y-\%m-\%d"
+endfu
+" Makes a call
+com! D call InsertDate()
