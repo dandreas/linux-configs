@@ -17,11 +17,13 @@ Plugin 'L9'
 Plugin 'whatyouhide/vim-gotham'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Bundle 'tomasr/molokai'
 call vundle#end()
 filetype plugin indent on
 
 " Color Settings
 colorscheme molokai
+syntax on
 
 " Airline settings
 set laststatus=2 " Allows the powerline to run whether there are tabs or not.
