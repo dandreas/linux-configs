@@ -27,7 +27,7 @@ syntax on
 
 " Airline settings
 set laststatus=2 " Allows the powerline to run whether there are tabs or not.
-" let g:airline_powerline_fonts = 1 " This line only works with a Powerline
+let g:airline_powerline_fonts = 1 " This line only works with a Powerline
 " compatible font. Otherwise the airline will be full of junk
 set t_Co=256 "Makes everything look better
 

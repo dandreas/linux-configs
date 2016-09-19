@@ -155,11 +155,13 @@ bindsym Mod1+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-    status_command i3status
+bar 
+{
+    status_command i3blocks
     tray_output LVDS
     #tray_output primary
-    colors {
+    colors 
+    {
         background #232323
         statusline #DCDCDC
     }
@@ -171,3 +173,4 @@ exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 exec --no-startup-id nm-applet
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
+exec --no-startup-id xfce4-mixer
