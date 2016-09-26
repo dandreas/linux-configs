@@ -12,6 +12,7 @@ cp ~/screenfix.sh ~/Git/linux-configs
 cp ~/steamfix.sh ~/Git/linux-configs
 cp ~/ssh-ips ~/Git/linux-configs
 cp ~/ssh-ubuserver.sh ~/Git/linux-configs
+cp ~/.i3blocks.conf ~/Git/linux-configs
 
 cd ~/Git/linux-configs
 git diff
