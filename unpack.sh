@@ -8,6 +8,7 @@
 mkdir ~/.i3
 cp config ~/.i3
 cp screenfix.sh ~/
+cp .i3blocks.conf ~/
 
 # ssh
 cp ssh-ubuserver.sh ~/
@@ -18,6 +19,10 @@ cp update-lconf.sh ~/
 # misc
 cp steamfix.sh ~/
 cp temp ~/
+
+# sets up git
+git config --global user.email "belfieldcecil@gmail.com"
+git config --global user.name "dandreas"
 
 # sets up vim.
 cp .vimrc ~/
