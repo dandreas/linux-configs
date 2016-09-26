@@ -173,4 +173,3 @@ exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 exec --no-startup-id nm-applet
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
-exec --no-startup-id xfce4-mixer

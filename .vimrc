@@ -18,6 +18,7 @@ Plugin 'whatyouhide/vim-gotham'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Bundle 'tomasr/molokai'
+Plugin 'chriskempson/base16-vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -28,7 +29,8 @@ syntax on
 " Airline settings
 set laststatus=2 " Allows the powerline to run whether there are tabs or not.
 let g:airline_powerline_fonts = 1 " This line only works with a Powerline
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1 " This line creates the bufferline up top
+let g:airline_theme='base16' " This is the theme for airline
 set t_Co=256 "Makes everything look better
 
 " Tab settings
