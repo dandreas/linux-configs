@@ -17,3 +17,4 @@ cp ~/.i3blocks.conf ~/Git/linux-configs
 cd ~/Git/linux-configs
 git diff
 git commit -a -m "auto-commit"
+git push origin master
