@@ -4,6 +4,6 @@
 echo If this connection fails, odds are either:
 echo 1. The server IP changed
 echo 2. The server is down
-echo \n
+echo 
 sudo scp -r ~/Git/ git@172.16.117.67:/home/git/
 
