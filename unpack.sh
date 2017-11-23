@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 # This script does a few things:
 # 1. Unpacks this packages' files into their respective places
 # 2. Installs Vundle (for vim)
