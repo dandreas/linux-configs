@@ -2,7 +2,7 @@
 # Pushes changes in set configs to the linux-configs git.
 echo "This app will NOT ask you whether you wish to accept the changes being committed"
 echo "To cancel the processes of this app hit CTRL + C before exiting the diff command"
-echo "It may also be needed to rollback the files to a previous commit"
+echo "You also may want to rollback the files to a previous commit"
 
 cp ~/.i3/config ~/Git/linux-configs
 cp ~/.vimrc ~/Git/linux-configs
