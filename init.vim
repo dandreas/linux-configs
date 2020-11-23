@@ -1,8 +1,13 @@
 " n/VIM config file
-" U 12/31/2019
+" U 11/17/2020
+" Add binding for drilling to open file in NERDTree (C-m)
+" Also add NERDTree git plugin, other cosmetic NERDTree changes
 
-" Added better documentation of plugins, rearanged and formatted settings
-" better (Minor changes on the 31st)
+" U 8/14/2020
+" Add multi cursor, remap tree access to c-h, c-n is now multiselect. altered
+" o macro accordingly
+
+" Added remaping for space to insert a single char. Some minor cleanup.
 
 " Replaced Vundle with vim-plug since vundle has been abandoned
 " To install vim-plug:
@@ -36,8 +41,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasr/molokai'
 " Base16 airline theme
 Plug 'chriskempson/base16-vim'
-" NerdTree file sidebar (just hit C-n)
-Plug 'scrooloose/nerdtree'
+" NerdTree file sidebar (just hit C-h)
+Plug 'preservim/nerdtree'
+" NerdTree Git plugin
+Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Surround 
 Plug 'tpope/vim-surround'
 " Ctrl-P search utility
@@ -50,6 +58,8 @@ Plug 'itchyny/calendar.vim'
 Plug 'kshenoy/vim-signature'
 " Rainbow parenthesis activated with :RainbowToggle
 Plug 'luochen1990/rainbow'
+" Multi cursor (C-n for word select, up/down is c-up or c-down)
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " Autocomplete
 if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -72,7 +82,7 @@ let @i = "ggVGyjgg/call insertjV/'\);kp:noh:wk"
 " Notes: changed jVjjp to jV/'kp and moved it to before :noh
 let @o = "ggVGyjgg/temp_blobnjV/'\);kp:noh:wk"
 " Macro for setting up scripts, requires nerdtree. Script top and file list bottom, start in script
-let @p = "gg0/v_namef'ldwjgg0ywkhpjddk:nohj"
+let @p = "gg0/v_namef'ldwjgg0ywkhpjddk:nohj"
 " Copy all (like Ctrl-A Ctrl-C in anything else)
 let @c = "ggVGy"
 " Tab in and move down 1
@@ -85,7 +95,11 @@ au FocusLost,WinLeave * :silent! wa
 au FocusGained,BufEnter * :silent! !
 
 " NERDTree settings
-map <silent> <C-n> :NERDTreeFocus<CR>
+map <silent> <C-h> :NERDTreeFocus<CR>
+map <silent> <C-m> :NERDTreeFind<CR>
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
 " Autocomplete settings
 " set encoding=utf-8 " YouCompleteMe conf
@@ -130,20 +144,19 @@ set number relativenumber
 " Set up parenthesis highlights
 let g:rainbow_active = 0
 
+" Set up folding 
+set foldmethod=indent
+
 
 " Mappings
 " Get rid of search highlights
 map <silent> <C-;> :noh<cr>
-
-" Set up folding 
-set foldmethod=indent
-
 " Map // to search for clipboard text
 noremap // /<C-R>"<CR>
-
+" Map <Space> to insert a single character
+noremap <Space> a_<Esc>r
 " Map ' to function as `
 map ' `
-
 " Map :WO to @p
 com! WO @p
 
@@ -171,6 +184,12 @@ func! InsertDate()
 endfu
 " Makes a call
 com! D call InsertDate()
+
+" Switches to excel
+func! SwitchToPivot()
+    :cd C:/Git/EDISON_Budget/
+endfu
+com! P call SwitchToPivot()
 
 " Windows install stuff, comment out on linux. 
 " Sets the working directory, start nerdtree on entry
